@@ -14,7 +14,7 @@ dev_dependencies:
 From pub.dev:
 ```yaml
 dev_dependencies:
-  flutter_app_renamer: ^1.0.0
+  flutter_app_renamer: ^1.0.2
 ```
 
 Then add the following (`name` is required; `id` is optional):
