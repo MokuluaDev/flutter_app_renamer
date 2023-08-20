@@ -27,20 +27,14 @@ void doRename() {
 
   List<Platform> platforms = getPlatforms();
 
-  print('Updating AppName...');
-  print('New AppName: $newName');
+  print('Updating AppName to $newName');
 
-  changeAppName(newName, platforms);
-
-  print('AppName successfully changed');
+  changeAppName(newName, platforms).then((value) => print('AppName successfully changed'));
 
   if (newId != null) {
-    print('Updating BundleID');
-    print('New BundleID: $newId');
+    print('Updating BundleID to $newId');
 
-    changeBundleId(newId, platforms);
-
-    print('BundleID successfully changed');
+    changeBundleId(newId, platforms).then((value) => print('BundleID successfully changed'));
   }
 }
 

@@ -1,3 +1,7 @@
+## 0.1.0
+
+- beta release
+
 ## 0.0.5
 
 - Testing minor bug fix
