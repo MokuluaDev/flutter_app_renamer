@@ -4,7 +4,7 @@ A command-line tool that makes it easy to change your project's AppName and Bund
 
 ## How It Works
 
-Flutter App Renamer uses [rename](https://pub.dev/packages/rename) behind the scenes to handle the heavy lifting. This package allows you to define your AppName and BundleID in pubspec.yaml and then update them with slightly less effort or memory involved.
+Flutter App Renamer uses [rename](https://pub.dev/packages/rename) behind the scenes to handle the heavy lifting. This package allows you to define your AppName and BundleID in pubspec.yaml and then update them with slightly less effort.
 
 ## Getting started
 
@@ -15,7 +15,7 @@ dev_dependencies:
   flutter_app_renamer:
     git:
       url: https://github.com/MokuluaDev/flutter_app_renamer.git
-      ref: master
+      ref: main
 
 flutter_app_name:
   name: "Your New Name Here"
