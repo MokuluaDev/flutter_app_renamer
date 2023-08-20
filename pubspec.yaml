@@ -1,6 +1,6 @@
 name: flutter_app_renamer
 description: A command-line tool that makes it easy to change your Flutter AppName and BundleID.
-version: 0.0.3
+version: 0.0.4
 repository: https://github.com/MokuluaDev/flutter_app_renamer
 
 environment:

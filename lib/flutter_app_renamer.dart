@@ -23,9 +23,29 @@ void doRename() {
 
   final String? newId = yamlKeyData['id'];
 
-  List<Platform> platforms = List<Platform>.empty(growable: true);
-
   print('Detecting platforms...');
+
+  List<Platform> platforms = getPlatforms();
+
+  print('Updating AppName...');
+  print('New AppName: $newName');
+
+  changeAppName(newName, platforms);
+
+  print('AppName successfully changed');
+
+  if (newId != null) {
+    print('Updating BundleID');
+    print('New BundleID: $newId');
+
+    changeBundleId(newId, platforms);
+
+    print('BundleID successfully changed');
+  }
+}
+
+List<Platform> getPlatforms() {
+  List<Platform> platforms = List<Platform>.empty(growable: true);
 
   if (Directory('/android').existsSync()) {
     print('Found Android');
@@ -57,19 +77,5 @@ void doRename() {
     platforms.add(Platform.windows);
   }
 
-  print('Updating AppName...');
-  print('New AppName: $newName');
-
-  changeAppName(newName, platforms);
-
-  print('AppName successfully changed');
-
-  if (newId != null) {
-    print('Updating BundleID');
-    print('New BundleID: $newId');
-
-    changeBundleId(newId, platforms);
-
-    print('BundleID successfully changed');
-  }
+  return platforms;
 }
