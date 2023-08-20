@@ -1,3 +1,7 @@
+## 0.0.5
+
+- Testing minor bug fix
+
 ## 0.0.4
 
 - Refactored doRename() to move platform detection to its own method

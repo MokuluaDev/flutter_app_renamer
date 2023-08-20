@@ -47,32 +47,32 @@ void doRename() {
 List<Platform> getPlatforms() {
   List<Platform> platforms = List<Platform>.empty(growable: true);
 
-  if (Directory('/android').existsSync()) {
+  if (Directory('android').existsSync()) {
     print('Found Android');
     platforms.add(Platform.android);
   }
 
-  if (Directory('/ios').existsSync()) {
+  if (Directory('ios').existsSync()) {
     print('Found iOS');
     platforms.add(Platform.ios);
   }
 
-  if (Directory('/linux').existsSync()) {
+  if (Directory('linux').existsSync()) {
     print('Found Linux');
     platforms.add(Platform.linux);
   }
 
-  if (Directory('/macos').existsSync()) {
+  if (Directory('macos').existsSync()) {
     print('Found MacOS');
     platforms.add(Platform.macOS);
   }
 
-  if (Directory('/web').existsSync()) {
+  if (Directory('web').existsSync()) {
     print('Found web');
     platforms.add(Platform.web);
   }
 
-  if (Directory('/windows').existsSync()) {
+  if (Directory('windows').existsSync()) {
     print('Found Windows');
     platforms.add(Platform.windows);
   }
