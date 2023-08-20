@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Fixed formatting
+
 ## 1.0.1
 
 - Fixed publishing issues
