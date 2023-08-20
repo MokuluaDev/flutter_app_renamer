@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Fixed minor bug
+
 ## 0.1.0
 
 - beta release

@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:rename/rename.dart';
 import 'package:yaml/yaml.dart';
 
-void doRename() {
+void doRename() async {
   final File yamlFile = File('pubspec.yaml');
   final Map yamlData = loadYaml(yamlFile.readAsStringSync());
   final Map? yamlKeyData = yamlData['flutter_app_name'];
@@ -29,12 +29,12 @@ void doRename() {
 
   print('Updating AppName to $newName');
 
-  changeAppName(newName, platforms).then((value) => print('AppName successfully changed'));
+  await changeAppName(newName, platforms).then((value) => print('AppName successfully changed'));
 
   if (newId != null) {
     print('Updating BundleID to $newId');
 
-    changeBundleId(newId, platforms).then((value) => print('BundleID successfully changed'));
+    await changeBundleId(newId, platforms).then((value) => print('BundleID successfully changed'));
   }
 }
 
