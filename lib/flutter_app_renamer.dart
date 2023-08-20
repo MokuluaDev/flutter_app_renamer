@@ -27,32 +27,32 @@ void doRename() {
 
   print('Detecting platforms...');
 
-  if (Directory('/android').exists()) {
+  if (Directory('/android').existsSync()) {
     print('Found Android');
     platforms.add(Platform.android);
   }
 
-  if (Directory('/ios').exists()) {
+  if (Directory('/ios').existsSync()) {
     print('Found iOS');
     platforms.add(Platform.ios);
   }
 
-  if (Directory('/linux').exists()) {
+  if (Directory('/linux').existsSync()) {
     print('Found Linux');
     platforms.add(Platform.linux);
   }
 
-  if (Directory('/macos').exists()) {
+  if (Directory('/macos').existsSync()) {
     print('Found MacOS');
     platforms.add(Platform.macOS);
   }
 
-  if (Directory('/web').exists()) {
+  if (Directory('/web').existsSync()) {
     print('Found web');
     platforms.add(Platform.web);
   }
 
-  if (Directory('/windows').exists()) {
+  if (Directory('/windows').existsSync()) {
     print('Found Windows');
     platforms.add(Platform.windows);
   }
