@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Prep for publishing on pub.dev
+
 ## 0.1.1
 
 - Fixed minor bug

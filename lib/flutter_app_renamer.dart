@@ -1,3 +1,6 @@
+/// Copyright (c) 2023 Mokulua Software Studio. All rights reserved.
+/// Use of this source code is governed by the MIT license that can be found in the LICENSE file.
+
 library flutter_app_renamer;
 
 import 'dart:io';
@@ -36,6 +39,8 @@ void doRename() async {
 
     await changeBundleId(newId, platforms).then((value) => print('BundleID successfully changed'));
   }
+
+  print('Rename complete');
 }
 
 List<Platform> getPlatforms() {

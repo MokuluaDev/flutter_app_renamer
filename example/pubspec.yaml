@@ -1,0 +1,8 @@
+name: your_app
+
+dev_dependencies:
+  flutter_app_renamer: ^1.0.0
+
+flutter_app_name:
+  name: "Your New Name Here"
+  id: "com.example.optional"
