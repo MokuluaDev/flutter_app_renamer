@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Fixed publishing issues
+
 ## 1.0.0
 
 - Prep for publishing on pub.dev

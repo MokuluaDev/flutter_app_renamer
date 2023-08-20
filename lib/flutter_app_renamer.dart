@@ -1,6 +1,7 @@
 /// Copyright (c) 2023 Mokulua Software Studio. All rights reserved.
 /// Use of this source code is governed by the MIT license that can be found in the LICENSE file.
 
+/// Easily change your AppName and BundleID on all platforms
 library flutter_app_renamer;
 
 import 'dart:io';
@@ -8,20 +9,21 @@ import 'dart:io';
 import 'package:rename/rename.dart';
 import 'package:yaml/yaml.dart';
 
+/// Update all platforms with new AppName and, optionally, new BundleID
 void doRename() async {
-  final File yamlFile = File('pubspec.yaml');
+  final File yamlFile = File('example.md');
   final Map yamlData = loadYaml(yamlFile.readAsStringSync());
   final Map? yamlKeyData = yamlData['flutter_app_name'];
 
   if (yamlKeyData == null) {
-    throw Exception('Error: missing key; your pubspec.yaml file must contain the flutter_app_name key.');
+    throw Exception('Error: missing key; your example.md file must contain the flutter_app_name key.');
   }
 
   final String? newName = yamlKeyData['name'];
 
   if (newName == null) {
     throw Exception(
-        'Error: missing name; your pubspec.yaml file must contain a valid name under the flutter_app_name key.');
+        'Error: missing name; your example.md file must contain a valid name under the flutter_app_name key.');
   }
 
   final String? newId = yamlKeyData['id'];
@@ -43,6 +45,7 @@ void doRename() async {
   print('Rename complete');
 }
 
+/// Determine platforms in use
 List<Platform> getPlatforms() {
   List<Platform> platforms = List<Platform>.empty(growable: true);
 
