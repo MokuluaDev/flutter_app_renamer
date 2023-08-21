@@ -11,13 +11,12 @@ import 'package:yaml/yaml.dart';
 
 /// Update all platforms with new AppName and, optionally, new BundleID
 void doRename() async {
-  final File yamlFile = File('example.md');
+  final File yamlFile = File('pubspec.yaml');
   final Map yamlData = loadYaml(yamlFile.readAsStringSync());
   final Map? yamlKeyData = yamlData['flutter_app_name'];
 
   if (yamlKeyData == null) {
-    throw Exception(
-        'Error: missing key; your example.md file must contain the flutter_app_name key.');
+    throw Exception('Error: missing key; your example.md file must contain the flutter_app_name key.');
   }
 
   final String? newName = yamlKeyData['name'];
@@ -35,14 +34,12 @@ void doRename() async {
 
   print('Updating AppName to $newName');
 
-  await changeAppName(newName, platforms)
-      .then((value) => print('AppName successfully changed'));
+  await changeAppName(newName, platforms).then((value) => print('AppName successfully changed'));
 
   if (newId != null) {
     print('Updating BundleID to $newId');
 
-    await changeBundleId(newId, platforms)
-        .then((value) => print('BundleID successfully changed'));
+    await changeBundleId(newId, platforms).then((value) => print('BundleID successfully changed'));
   }
 
   print('Rename complete');

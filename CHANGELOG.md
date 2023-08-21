@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Corrected overzealous refactoring
+
 ## 1.0.2
 
 - Fixed formatting
